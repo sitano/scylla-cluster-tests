@@ -1,0 +1,20 @@
+test_duration: 480
+
+n_db_nodes: 1
+n_loaders: 0
+n_monitor_nodes: 1
+
+instance_type_db: 'i3.4xlarge'
+instance_type_loader: 'm5.2xlarge' # 8 vCPU (4 cores), 32 GB RAM
+
+nemesis_class_name: 'NoOpMonkey'
+nemesis_interval: 5
+
+authenticator: 'PasswordAuthenticator'
+authenticator_user: cassandra
+authenticator_password: cassandra
+authorizer: 'CassandraAuthorizer'
+
+user_prefix: 'longevity-s3'
+space_node_threshold: 64424
+store_results_in_elasticsearch: false
